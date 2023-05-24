@@ -26,7 +26,7 @@ resource "null_resource" "provisioner" {
 
 
 resource "aws_route53_record" "records" {
-  zone_id = "Z08242083AT8A9INOKF8O"
+  zone_id = "Z081185722F3OEHA7R4DE"
   name    = "${var.component_name}-dev.uknowme.tech"
   type    = "A"
   ttl     = 30
@@ -79,8 +79,8 @@ resource "aws_iam_role_policy" "ssm-ps-policy" {
           "ssm:GetParameter"
         ],
         "Resource" : [
-          "arn:aws:kms:us-east-1:633788536644:key/dce90622-5a23-4f82-a639-be841f534702",
-          "arn:aws:ssm:us-east-1:633788536644:parameter/${var.env}.${var.component_name}.*"
+          "arn:aws:kms:us-east-1:351461694738:key/d93453ed-0d8a-427e-a5a1-59a6f1cda771",
+          "arn:aws:ssm:us-east-1:351461694738:parameter/${var.env}.${var.component_name}.*"
         ]
       }
     ]
